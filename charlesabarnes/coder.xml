@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Coder</Name>
+  <Repository>codercom/coder:1.25.0</Repository>
+  <Registry>https://hub.docker.com/r/codercom/coder</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:7080]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/code-server-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1637854659</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7080</HostPort>
+        <ContainerPort>7080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/coder-server/</HostDir>
+      <ContainerDir>/var/run/coder</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Port 2" Target="7080" Default="" Mode="tcp" Description="Container Port" Type="Port" Display="always" Required="false" Mask="false">7080</Config>
+  <Config Name="Host Path 1" Target="/var/run/coder" Default="" Mode="rw" Description="Container Path: /var/run/coder" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/coder-server/</Config>
+  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="" Mode="rw" Description="Container Path: /var/run/docker.sock" Type="Path" Display="always" Required="false" Mask="false">/var/run/docker.sock</Config>
+</Container>
